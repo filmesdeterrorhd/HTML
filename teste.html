@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Player e Botão de Voltar</title>
+    <style>
+        /* Definindo o estilo para a página */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Nosifer', cursive; /* Fonte Nosifer */
+        }
+
+        /* Foto de fundo com efeito escuro */
+        .background {
+            background: url('https://images.alphacoders.com/112/1126985.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Estilo para o escurecimento da imagem */
+        .background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Camada escura */
+            z-index: 1; /* Certifique-se de que a camada escura está acima da imagem */
+        }
+
+        /* Estilo para o botão de voltar */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red; /* Cor do fundo do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Nosifer', cursive; /* Fonte Nosifer */
+            text-decoration: none;
+            opacity: 0.9; /* Botão com leve transparência */
+            z-index: 2; /* Certifique-se de que o botão está acima da camada escura */
+        }
+
+        /* Estilo para o hover no botão */
+        .back-button:hover {
+            background-color: darkred; /* Cor ao passar o mouse */
+        }
+
+        /* Estilo para o container do player */
+        .player-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza o player */
+            border: 5px solid rgba(255, 0, 0, 0.8); /* Borda vermelha */
+            box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Efeito de luz vermelha */
+            padding: 10px; /* Espaçamento interno */
+            z-index: 2; /* Certifique-se de que o container está acima da camada escura */
+        }
+
+        /* Estilo para o iframe do player */
+        .player-container iframe {
+            width: 640px; /* Largura do player */
+            height: 360px; /* Altura do player */
+            border: none; /* Remove a borda do iframe */
+        }
+    </style>
+    <!-- Importando a fonte Nosifer do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Div para a imagem de fundo -->
+    <div class="background"></div>
+
+    <!-- Botão de voltar que redireciona para o site desejado -->
+    <a href="https://sessaoterrorhd.blogspot.com" class="back-button">Voltar</a>
+
+    <!-- Container para o player -->
+    <div class="player-container">
+        <iframe src="https://short.ink/bfG6noI7B" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
